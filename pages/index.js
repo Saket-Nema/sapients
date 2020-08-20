@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Router from "next/router";
 import { Row, Col, Button } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
-
 import CardComponent from "../components/card";
 
 const apiUrl = "https://api.spaceXdata.com/v3/launches?limit=100";
@@ -68,22 +67,20 @@ function Home({ data }) {
     <div className={styles.container}>
       <main className={styles.main}>
         <h6 className={styles.heading}>SpaceX Launch Programs</h6>
-
         <Row>
-          <Col sm={12} md={3}>
-          
+          <Col sm={12} md={3}>          
             <div className={styles.filter}>
-              <p style={{fontSize:18,fontWeight: "bolder", textAlign:"left", marginBottom: "0rem" }}>Filters</p>
+              <p style={{fontSize:18,fontWeight: "bolder", textAlign:"left", marginBottom: "0rem"}}>Filters</p>
               <div className={styles.filtered}>Launch Year</div>
               <Row style={{marginBottom: "1rem"}}>
                 {launchYears.map((item) => {
                   return (
-                    <Col xs={6} sm={6} md={6} >
+                    <Col xs={6} sm={3} md={6} >
                       <Button
                         onClick={async () => {
                           fetchData(item, launchSuccess, landSuccess);
                         }}
-                        style={{ margin: "3px", padding: "1px 15px 1px 15px", fontSize: 13}}
+                        style={{ margin: "3px", backgroundColor:"#c6e09b", color: "black", padding: "1px 15px 1px 15px", fontSize: 13}}
                         variant="success" 
                       >
                         {item}
@@ -91,8 +88,7 @@ function Home({ data }) {
                     </Col>
                   )
                 })}
-              </Row>
-              
+              </Row>              
               <div className={styles.filtered}>Successful Launch</div>
               <Row style={{marginBottom: "1rem"}}>
                 {success.map((item) => {
@@ -102,7 +98,7 @@ function Home({ data }) {
                         onClick={async () => {
                           fetchData(year, item, landSuccess);
                         }}
-                        style={{ margin: "3px", padding: "1px 15px 1px 15px", fontSize: 13}}
+                        style={{ margin: "3px",backgroundColor:"#c6e09b", color: "black", padding: "1px 15px 1px 15px", fontSize: 13}}
                         variant="success"
                       >
                         {item}
@@ -111,17 +107,16 @@ function Home({ data }) {
                   );
                 })}
               </Row>
-              
               <div className={styles.filtered}>Successful Landing</div>
               <Row>
                 {success.map((item) => {
                   return (
                     <Col xs={6} sm={6} md={6}>
-                      <Button 
+                      <Button text-center
                         onClick={async () => {
                           fetchData(year, launchSuccess, item);
                         }}
-                        style={{ margin: "3px", padding: "1px 15px 1px 15px", fontSize: 13}}
+                        style={{ margin: "3px", backgroundColor:"#c6e09b", color: "black", padding: "1px 15px 1px 15px", fontSize: 13}}
                         variant="success" 
                       >
                         {item}
@@ -130,34 +125,30 @@ function Home({ data }) {
                   );
                 })}
               </Row>
-            </div>
-          
+            </div>          
           </Col>
-
-          <Col xs= {12} sm={12} md={9}>
-          
+          <Col xs= {12} sm={12} md={9}>          
           <Row>
             {programsData.map((progaram) => {
               return (
-                <Col xs={12} sm={12} md={6} lg={3} style={{ marginBottom: "0.25rem"}}>
+                <Col xs={12} sm={6} md={6} lg={3} style={{ marginBottom: "0.25rem"}}>
                 <CardComponent progaram={progaram} />
                 </Col>
-                );
-            
+                );            
             })}
-            </Row>
-          
+            </Row>          
           </Col>
         </Row>
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <b>Developed by{" "} Saket Nema</b>
+          <div class="d-none d-md-block d-lg-block"><b>Developed by: Saket Nema</b></div>
+          <div class="d-block d-md-none d-lg-none"><b>Developed by:</b><br/>
+          <b>Saket Nema</b></div>
                   </a>
       </footer>
     </div>
@@ -166,12 +157,9 @@ function Home({ data }) {
 
 export async function getStaticProps() {
   const allDataRes = await fetch(apiUrl);
-
   const allData = await allDataRes.json();
-
   let data = {};
   data = { allData };
-
   return {
     props: {
       data,

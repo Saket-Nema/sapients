@@ -2,11 +2,11 @@ import { Button, Card } from "react-bootstrap";
 
 export default function CardComponent({ progaram }) {
   return (
-    <Card style={{ width: "8rem", padding: "0.5rem", height:270}}>
+    <Card style={{ padding: "0.5rem"}}>
       
-      <Card.Body style={{padding: "0rem"}} >
+      <Card.Body style={{padding: "0.25rem"}} >
       <Card.Img
-        style={{ height: 125, backgroundColor: "#f2f2f2" }}
+        style={{ backgroundColor: "#f2f2f2" }}
         variant="top"
         src={progaram.links.mission_patch} alt="Image Not Available"
       />
