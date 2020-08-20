@@ -1,4 +1,5 @@
 Project structure:
+
 Project code is written under Pages/index.js file.
 
 Card component is created under components folder.
