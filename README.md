@@ -1,9 +1,10 @@
 Project structure:
-Project code is written under Pages/index.js file
-Card component is created under components folder
-CSS is under styles/Home.module.css
+Project code is written under Pages/index.js file.
+Card component is created under components folder.
+CSS is under styles/Home.module.css.
 
-To run the App, please run - npm install.
+To install node modules, please run - npm install.
+To run App locally - npm run dev
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
