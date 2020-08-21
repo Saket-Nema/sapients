@@ -66,39 +66,64 @@ function Home({ data }) {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h6 className={styles.heading}>SpaceX Launch Programs</h6>
+       <title>sapients-app</title>      
+        <meta charSet="UTF-8"/>
+        <meta name="description" content="SpaceX Launch Programs"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <h6 className={styles.heading}>SpaceX Launch Programs</h6>
         <Row>
-          <Col sm={12} md={3}>          
+          <Col sm={12} md={3}>
             <div className={styles.filter}>
-              <p style={{fontSize:18,fontWeight: "bolder", textAlign:"left", marginBottom: "0rem"}}>Filters</p>
+              <p
+                style={{
+                  fontSize: 18,
+                  fontWeight: "bolder",
+                  textAlign: "left",
+                  marginBottom: "0rem",
+                }}
+              >
+                Filters
+              </p>
               <div className={styles.filtered}>Launch Year</div>
-              <Row style={{marginBottom: "1rem"}}>
+              <Row style={{ marginBottom: "1rem" }}>
                 {launchYears.map((item) => {
                   return (
-                    <Col xs={6} sm={3} md={6} >
+                    <Col xs={6} sm={3} md={6}>
                       <Button
-                        onClick={async () => {
-                          fetchData(item, launchSuccess, landSuccess);
+                        onClick={() =>
+                          fetchData(item, launchSuccess, landSuccess)
+                        }
+                        style={{
+                          margin: "3px",
+                          backgroundColor: "#c6e09b",
+                          color: "black",
+                          padding: "1px 15px 1px 15px",
+                          fontSize: 13,
                         }}
-                        style={{ margin: "3px", backgroundColor:"#c6e09b", color: "black", padding: "1px 15px 1px 15px", fontSize: 13}}
-                        variant="success" 
+                        variant="success"
                       >
                         {item}
                       </Button>
                     </Col>
-                  )
+                  );
                 })}
-              </Row>              
+              </Row>
               <div className={styles.filtered}>Successful Launch</div>
-              <Row style={{marginBottom: "1rem"}}>
+              <Row style={{ marginBottom: "1rem" }}>
                 {success.map((item) => {
                   return (
                     <Col xs={6} sm={6} md={6}>
                       <Button
-                        onClick={async () => {
-                          fetchData(year, item, landSuccess);
+                        onClick={() =>
+                          fetchData(year, item.toLowerCase(), landSuccess)
+                        }
+                        style={{
+                          margin: "3px",
+                          backgroundColor: "#c6e09b",
+                          color: "black",
+                          padding: "1px 15px 1px 15px",
+                          fontSize: 13,
                         }}
-                        style={{ margin: "3px",backgroundColor:"#c6e09b", color: "black", padding: "1px 15px 1px 15px", fontSize: 13}}
                         variant="success"
                       >
                         {item}
@@ -112,31 +137,44 @@ function Home({ data }) {
                 {success.map((item) => {
                   return (
                     <Col xs={6} sm={6} md={6}>
-                      <Button text-center
-                        onClick={async () => {
-                          fetchData(year, launchSuccess, item);
+                      <Button
+                        onClick={() =>
+                          fetchData(year, launchSuccess, item.toLowerCase())
+                        }
+                        style={{
+                          margin: "3px",
+                          backgroundColor: "#c6e09b",
+                          color: "black",
+                          padding: "1px 15px 1px 15px",
+                          fontSize: 13,
                         }}
-                        style={{ margin: "3px", backgroundColor:"#c6e09b", color: "black", padding: "1px 15px 1px 15px", fontSize: 13}}
-                        variant="success" 
+                        variant="success"
                       >
                         {item}
-                      </Button><br/>
+                      </Button>
+                      <br />
                     </Col>
                   );
                 })}
               </Row>
-            </div>          
+            </div>
           </Col>
-          <Col xs= {12} sm={12} md={9}>          
-          <Row>
-            {programsData.map((progaram) => {
-              return (
-                <Col xs={12} sm={6} md={6} lg={3} style={{ marginBottom: "0.25rem"}}>
-                <CardComponent progaram={progaram} />
-                </Col>
-                );            
-            })}
-            </Row>          
+          <Col xs={12} sm={12} md={9}>
+            <Row>
+              {programsData.map((progaram) => {
+                return (
+                  <Col
+                    xs={12}
+                    sm={6}
+                    md={6}
+                    lg={3}
+                    style={{ marginBottom: "0.25rem" }}
+                  >
+                    <CardComponent progaram={progaram} />
+                  </Col>
+                );
+              })}
+            </Row>
           </Col>
         </Row>
       </main>
@@ -146,10 +184,15 @@ function Home({ data }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div class="d-none d-md-block d-lg-block"><b>Developed by: Saket Nema</b></div>
-          <div class="d-block d-md-none d-lg-none"><b>Developed by:</b><br/>
-          <b>Saket Nema</b></div>
-                  </a>
+          <div className="d-none d-md-block d-lg-block">
+            <b>Developed by: Saket Nema</b>
+          </div>
+          <div className="d-block d-md-none d-lg-none">
+            <b>Developed by:</b>
+            <br />
+            <b>Saket Nema</b>
+          </div>
+        </a>
       </footer>
     </div>
   );
