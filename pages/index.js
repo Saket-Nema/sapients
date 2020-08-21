@@ -79,7 +79,7 @@ function Home({ data }) {
                   fontSize: 18,
                   fontWeight: "bolder",
                   textAlign: "left",
-                  marginBottom: "0rem",
+                  marginBottom: 0,
                 }}
               >
                 Filters
@@ -94,7 +94,7 @@ function Home({ data }) {
                           fetchData(item, launchSuccess, landSuccess)
                         }
                         style={{
-                          margin: "3px",
+                          margin: 3,
                           backgroundColor: "#c6e09b",
                           color: "black",
                           padding: "1px 15px 1px 15px",
@@ -118,7 +118,7 @@ function Home({ data }) {
                           fetchData(year, item.toLowerCase(), landSuccess)
                         }
                         style={{
-                          margin: "3px",
+                          margin: 3,
                           backgroundColor: "#c6e09b",
                           color: "black",
                           padding: "1px 15px 1px 15px",
@@ -142,7 +142,7 @@ function Home({ data }) {
                           fetchData(year, launchSuccess, item.toLowerCase())
                         }
                         style={{
-                          margin: "3px",
+                          margin: 3,
                           backgroundColor: "#c6e09b",
                           color: "black",
                           padding: "1px 15px 1px 15px",
