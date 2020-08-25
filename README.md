@@ -1,3 +1,9 @@
+LightHouse Score:
+Performance: 85,
+Accessibility:95,
+BestPractices: 100,
+SEO: 89
+
 Project structure:
 
 Project code is written under Pages/index.js file.
