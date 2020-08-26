@@ -10,7 +10,7 @@ BestPractices: 100,
 
 SEO: 89
 
-Screenshot of Lighthouse score: https://github.com/Saket-Nema/sapients/blob/master/public/lightHouseScore.PNG
+Screenshot of Lighthouse score: https://github.com/Saket-Nema/sapients/blob/master/lightHouseScore.PNG
 
 Project structure:-
 
