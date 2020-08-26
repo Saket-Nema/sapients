@@ -61,6 +61,7 @@ function Home({ data }) {
     const data = await res.json();
     setProgramsData(data);
     updateQuery(url.split(apiUrl)[1]);
+    return url;
   };
 
   return (
