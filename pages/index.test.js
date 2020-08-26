@@ -11,23 +11,21 @@ test('2020 should be in launch years', () => {
 
 //Url
 describe ("Url Update", () => {
-  test('Launch year Url change', () => {  
-    const url = fetchData("2020", "null", "null");
-    expect(url).toBe('http://localhost:3000/?&launch_year=2020');  
-    //expect(true).toBe(true);
+  
+test('Launch year Url change', () => {  
+const url = fetchData("2020", null, null);
+expect(url).toBe('http://localhost:3000/?&launch_year=2020'); 
+});
+
+test('Launch success Url change', () => {  
+  const url = fetchData(null, true, null);
+  expect(url).toBe('http://localhost:3000/?&launch_success=true');  
   });
 
-  test('Launch success Url change', () => {  
-    const url = fetchData("null", true, "null");
-    expect(url).toBe('http://localhost:3000/?&launch_year=2020');  
-    //expect(true).toBe(true);
-  });
-
-  test('Url change', () => {  
-    const url = fetchData("2020", null, null);
-    expect(url).toBe('http://localhost:3000/?&launch_year=2020');  
-    //expect(true).toBe(true);
-  });
+  test('Land year Url change', () => {  
+    const url = fetchData(null, null, true);
+    expect(url).toBe('http://localhost:3000/?&land_success=true');  
+    });
 })
 
 
