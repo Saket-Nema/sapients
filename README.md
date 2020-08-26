@@ -2,15 +2,17 @@ LightHouse Score:
 
 Performance: 85,
 
-Accessibility:95,
+Accessibility: 95,
 
 BestPractices: 100,
 
 SEO: 89
 
+Please find attached screenshot of Lighthouse score under public/lighthouse.png file
+
 Project structure:
 
-Project code is written under Pages/index.js file.
+Project code is Server-side Rendered written mainly under pages/index.js file.
 
 Card component is created under components folder.
 
