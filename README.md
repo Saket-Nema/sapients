@@ -10,7 +10,7 @@ BestPractices: 100,
 
 SEO: 89
 
-Screenshot of Lighthouse score under public/Lighthouse.PNG file
+Screenshot of Lighthouse score under public/lightHouseScore.PNG file
 
 Project structure:-
 
