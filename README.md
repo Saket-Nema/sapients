@@ -2,7 +2,7 @@ Deployment link: https://sapients-app.herokuapp.com/
 
 LightHouse Score:-
 
-Performance: 85,
+Performance: 89,
 
 Accessibility: 95,
 
