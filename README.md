@@ -1,18 +1,15 @@
-LightHouse Score:
+Deployment link: https://sapients-app.herokuapp.com/
 
+LightHouse Score:-
 Performance: 85,
-
 Accessibility: 95,
-
 BestPractices: 100,
-
 SEO: 89
-
 Screenshot of Lighthouse score under public/Lighthouse.PNG file
 
-Project structure:
+Project structure:-
 
-Project code is Server-side Rendered. Code written mainly under pages/index.js file.
+Project is Server-side Rendered. Code written mainly under pages/index.js file.
 
 Card component is created under components folder.
 
